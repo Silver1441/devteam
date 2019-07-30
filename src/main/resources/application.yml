@@ -1,0 +1,22 @@
+developer-list:
+  developer:
+    - id: 101
+      name: Petr
+      patronymic: Nikolayevich
+      surName: Glinco
+      DeveloperGrade: D2
+    - id: 102
+      name: Stas
+      patronymic: Grigorievich
+      surName: Kurban
+      DeveloperGrade: D3
+    - id: 103
+      name: Igor
+      patronymic: Ivanovich
+      surName: Buiko
+      DeveloperGrade: D3
+    - id: 104
+      name: Roman
+      patronymic: Ignatievich
+      surName: Chistoserdov
+      DeveloperGrade: D4
