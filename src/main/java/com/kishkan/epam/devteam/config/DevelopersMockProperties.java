@@ -19,11 +19,4 @@ public class DevelopersMockProperties {
     public void setDevelopers(List<Developer> developers) {
         this.developers = developers;
     }
-
-    @Override
-    public String toString() {
-        return "DevelopersMockProperties{" +
-                "developers=" + developers +
-                '}';
-    }
 }

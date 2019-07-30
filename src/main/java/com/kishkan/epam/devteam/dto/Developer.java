@@ -9,13 +9,6 @@ public class Developer {
     private String patronymic;
     private DeveloperGrade developerGrade;
 
-    public Developer(int id, String name, String surName, String patronymic, DeveloperGrade developerGrade) {
-        this.id = id;
-        this.name = name;
-        this.surName = surName;
-        this.patronymic = patronymic;
-        this.developerGrade = developerGrade;
-    }
 
     public int getId() {
         return id;

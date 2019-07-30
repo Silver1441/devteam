@@ -18,6 +18,6 @@ public class Application {
 		DevelopersMockProperties developersMockProperties = context.getBean(DevelopersMockProperties.class);
 
 		System.out.println("LOG: app start");
-		System.out.println(developersMockProperties);
+		System.out.println(developersMockProperties.getDevelopers());
 	}
 }
