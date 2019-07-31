@@ -1,6 +1,7 @@
 package com.kishkan.epam.devteam;
 
-import com.kishkan.epam.devteam.config.StaffMockProperties;
+import com.kishkan.epam.devteam.repository.StaffRepository;
+import com.kishkan.epam.devteam.service.StaffListBuilder;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -11,9 +12,9 @@ public class Application {
 
 	public static void main(String[] args) {
 		ApplicationContext context = SpringApplication.run(Application.class, args);
-		StaffMockProperties staffMockProperties = context.getBean(StaffMockProperties.class);
+		context.getBean(StaffListBuilder.class).buildStaffRepository();
 
-		System.out.println("LOG: app start");
-		System.out.println(staffMockProperties);
+		System.out.println("Workers list: " + context.getBean(StaffRepository.class).getList());
+
 	}
 }

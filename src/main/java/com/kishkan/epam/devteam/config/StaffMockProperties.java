@@ -15,8 +15,4 @@ public class StaffMockProperties {
     public List<StaffMember> getStaffMembers() {
         return staffMembers;
     }
-
-    public void setStaffMembers(List<StaffMember> staffMembers) {
-        this.staffMembers = staffMembers;
-    }
 }

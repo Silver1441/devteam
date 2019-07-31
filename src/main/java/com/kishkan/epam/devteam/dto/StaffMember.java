@@ -48,4 +48,10 @@ public class StaffMember {
     public void setStaffAppointment(StaffAppointment staffAppointment) {
         this.staffAppointment = staffAppointment;
     }
+
+    @Override
+    public String toString() {
+        return "{id=" + id + ", " + name + " " + " " + surName + " " + patronymic + ", " + staffCompetenceGrade +
+                " " + staffAppointment +'}';
+    }
 }
