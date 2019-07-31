@@ -1,22 +1,32 @@
 developer-list:
-  developers:
+  staffMembers:
     - id: 101
       name: Petr
       patronymic: Nikolayevich
       surName: Glinco
-      DeveloperGrade: D2
+      StaffCompetenceGrade: D2
+      StaffAppointment: DEVELOPER
     - id: 102
       name: Stas
       patronymic: Grigorievich
       surName: Kurban
-      DeveloperGrade: D3
+      StaffCompetenceGrade: D3
+      StaffAppointment: DEVELOPER
     - id: 103
       name: Igor
       patronymic: Ivanovich
       surName: Buiko
-      DeveloperGrade: D3
+      StaffCompetenceGrade: D3
+      StaffAppointment: DEVELOPER
     - id: 104
       name: Roman
       patronymic: Ignatievich
       surName: Chistoserdov
-      DeveloperGrade: D4
+      StaffCompetenceGrade: D4
+      StaffAppointment: DEVELOPER
+    - id: 104
+      name: Ivan
+      patronymic: Vladimirovich
+      surName: Tronin
+      StaffCompetenceGrade: D3
+      StaffAppointment: DEVELOPER
