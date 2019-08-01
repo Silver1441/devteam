@@ -17,16 +17,22 @@ developer-list:
       patronymic: Ivanovich
       surName: Buiko
       StaffCompetenceGrade: D3
-      StaffAppointment: DEVELOPER
+      StaffAppointment: DESIGNER
     - id: 104
       name: Roman
       patronymic: Ignatievich
       surName: Chistoserdov
       StaffCompetenceGrade: D4
       StaffAppointment: DEVELOPER
-    - id: 104
+    - id: 105
       name: Ivan
       patronymic: Vladimirovich
       surName: Tronin
       StaffCompetenceGrade: D3
       StaffAppointment: DEVELOPER
+    - id: 106
+      name: Gulman
+      patronymic: Sergeevich
+      surName: Zolotov
+      StaffCompetenceGrade: D5
+      StaffAppointment: DELIVERY_MANAGER
