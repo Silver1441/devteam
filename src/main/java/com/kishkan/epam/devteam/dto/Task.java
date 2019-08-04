@@ -8,8 +8,14 @@ public class Task {
     private int id;
     private String taskDescription;
     private StaffMember executor;
-    private StaffMember taskManager;
     private TaskStatus taskStatus;
+
+    public Task(int id, String taskDescription, StaffMember executor, TaskStatus taskStatus) {
+        this.id = id;
+        this.taskDescription = taskDescription;
+        this.executor = executor;
+        this.taskStatus = taskStatus;
+    }
 
     public int getId() {
         return id;
@@ -19,9 +25,6 @@ public class Task {
     }
     public StaffMember getExecutor() {
         return executor;
-    }
-    public StaffMember getTaskManager() {
-        return taskManager;
     }
     public TaskStatus getTaskStatus() {
         return taskStatus;
@@ -36,10 +39,17 @@ public class Task {
     public void setExecutor(StaffMember executor) {
         this.executor = executor;
     }
-    public void setTaskManager(StaffMember taskManager) {
-        this.taskManager = taskManager;
-    }
     public void setTaskStatus(TaskStatus taskStatus) {
         this.taskStatus = taskStatus;
+    }
+
+    //Temporal toString for DEMO
+    @Override
+    public String toString() {
+        return "Task number:" +
+                " " + id +
+                ", \"" + taskDescription + "\"" +
+                ", executor: " + executor.getName() + " " + executor.getPatronymic() + " " + executor.getSurName()
+                + ", current status: " + taskStatus + ".";
     }
 }

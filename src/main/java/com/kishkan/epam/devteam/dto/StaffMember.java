@@ -51,7 +51,7 @@ public class StaffMember {
 
     @Override
     public String toString() {
-        return "{id=" + id + ", " + name + " " + patronymic + " " + surName + ", " + staffCompetenceGrade +
-                " " + staffAppointment +'}';
+        return "id=" + id + ", " + name + " " + patronymic + " " + surName + ", " + staffCompetenceGrade +
+                " " + staffAppointment;
     }
 }
