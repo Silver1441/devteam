@@ -16,6 +16,15 @@ public class StaffRepositoryImpl implements StaffRepository {
         return staff;
     }
 
+    public StaffMember getById(int id) {
+        for (StaffMember staffMember : staff) {
+            if (staffMember.getId() == id) {
+                return staffMember;
+            }
+        }
+        return null;
+    }
+
     public void setStaff(List<StaffMember> staff) {
         this.staff = staff;
     }

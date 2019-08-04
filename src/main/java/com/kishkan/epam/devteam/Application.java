@@ -13,5 +13,6 @@ public class Application {
 		ApplicationContext context = SpringApplication.run(Application.class, args);
 
 		System.out.println("Workers list: " + context.getBean(StaffRepository.class).getList());
+		System.out.println(context.getBean(StaffRepository.class).getById(102));
 	}
 }
