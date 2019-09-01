@@ -9,10 +9,14 @@ import org.springframework.stereotype.Service;
 public class EmployeeRepositoryManagerImpl implements EmployeeRepositoryManager {
 
     @Autowired
-    EmployeeRepository employeeRepository;
+    private EmployeeRepository employeeRepository;
 
     @Override
     public void addEmployee (Employee employee) {
         employeeRepository.addEmployee(employee);
+    }
+
+    public Employee getEmployeeById (int id) {
+        return employeeRepository.getEmployeeById(id);
     }
 }

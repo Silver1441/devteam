@@ -24,7 +24,12 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
                 "VALUES (?, ?, ?, ?, ?, ?, ?)";
         jdbcTemplate.update(sql, employee.getName(), employee.getPatronymic(), employee.getSurname(),
                 employee.getLogin(), employee.getPassword(), employee.getAppointment(), employee.getCompetenceGrade());
-        sql = null;
+    }
+
+    @Override
+    public Employee getEmployeeById (int id) {
+        sql = "SELECT * FROM employee WHERE staff_id = ?";
+        return jdbcTemplate.queryForObject(sql, new Object[]{id}, employeeMapper);
     }
 
 }

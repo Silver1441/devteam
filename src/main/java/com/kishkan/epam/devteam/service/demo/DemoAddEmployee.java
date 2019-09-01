@@ -17,8 +17,8 @@ public class DemoAddEmployee {
     EmployeeBuilder employeeBuilder;
 
     public void addEmployee() {
-        Employee employee = employeeBuilder.buildEmployee("Василий", "Николаевич", "Кузнецов",
-                "VasiaN", "11112qwerty", "designer", "D3");
+        Employee employee = employeeBuilder.buildEmployee("Оксана", "Федоровна", "Кулакова",
+                "Oksik", "Oksik", "tester", "D1");
 
         employeeRepositoryManager.addEmployee(employee);
         System.out.println(employee.getName() + " is added");

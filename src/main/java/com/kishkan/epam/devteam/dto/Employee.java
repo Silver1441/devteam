@@ -63,7 +63,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "id=" + id + ", " + name + " " + patronymic + " " + surname + ", " + competenceGrade +
+        return "id=" + id + ", " + name + " " + patronymic + " " + surname + ", " + login + ", " + competenceGrade +
                 " " + appointment;
     }
 }
