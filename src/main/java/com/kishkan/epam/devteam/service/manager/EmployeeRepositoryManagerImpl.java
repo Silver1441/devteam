@@ -5,6 +5,8 @@ import com.kishkan.epam.devteam.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class EmployeeRepositoryManagerImpl implements EmployeeRepositoryManager {
 
@@ -16,7 +18,13 @@ public class EmployeeRepositoryManagerImpl implements EmployeeRepositoryManager 
         employeeRepository.addEmployee(employee);
     }
 
+    @Override
     public Employee getEmployeeById (int id) {
         return employeeRepository.getEmployeeById(id);
+    }
+
+    @Override
+    public List<Employee> getEmployeesByAppointment(String appointment){
+        return employeeRepository.getEmployeesByAppointment(appointment);
     }
 }

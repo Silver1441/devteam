@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public class EmployeeRepositoryImpl implements EmployeeRepository {
 
@@ -30,6 +32,12 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
     public Employee getEmployeeById (int id) {
         sql = "SELECT * FROM employee WHERE staff_id = ?";
         return jdbcTemplate.queryForObject(sql, new Object[]{id}, employeeMapper);
+    }
+
+    @Override
+    public List<Employee> getEmployeesByAppointment(String appointment){
+        sql = "SELECT * FROM employee WHERE appointment = ?";
+        return jdbcTemplate.query(sql, employeeMapper, appointment);
     }
 
 }
