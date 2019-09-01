@@ -1,46 +1,69 @@
 package com.kishkan.epam.devteam.dto;
 
-import com.kishkan.epam.devteam.support.enums.TaskStatus;
+import java.time.LocalDate;
 
-import java.util.List;
 
 public class Task {
     private int id;
+    private String name;
     private String taskDescription;
-    private StaffMember executor;
-    private TaskStatus taskStatus;
+    private Employee executor;
+    private String taskStatus;
+    private LocalDate startDate;
+    private LocalDate endDate;
 
-    public Task(int id, String taskDescription, StaffMember executor, TaskStatus taskStatus) {
+    public Task(int id, String name, String taskDescription, Employee executor, String taskStatus,
+                LocalDate startDate) {
         this.id = id;
+        this.name = name;
         this.taskDescription = taskDescription;
         this.executor = executor;
         this.taskStatus = taskStatus;
+        this.startDate = startDate;
     }
 
     public int getId() {
         return id;
     }
+    public String getName() {
+        return name;
+    }
     public String getTaskDescription() {
         return taskDescription;
     }
-    public StaffMember getExecutor() {
+    public Employee getExecutor() {
         return executor;
     }
-    public TaskStatus getTaskStatus() {
+    public String getTaskStatus() {
         return taskStatus;
+    }
+    public LocalDate getStartDate() {
+        return startDate;
+    }
+    public LocalDate getEndDate() {
+        return endDate;
     }
 
     public void setId(int id) {
         this.id = id;
     }
+    public void setName(String name) {
+        this.name = name;
+    }
     public void setTaskDescription(String taskDescription) {
         this.taskDescription = taskDescription;
     }
-    public void setExecutor(StaffMember executor) {
+    public void setExecutor(Employee executor) {
         this.executor = executor;
     }
-    public void setTaskStatus(TaskStatus taskStatus) {
+    public void setTaskStatus(String taskStatus) {
         this.taskStatus = taskStatus;
+    }
+    public void setStartDate(LocalDate startDate) {
+        this.startDate = startDate;
+    }
+    public void setEndDate(LocalDate endDate) {
+        this.endDate = endDate;
     }
 
     //Temporal toString for DEMO
@@ -48,8 +71,9 @@ public class Task {
     public String toString() {
         return "Task number:" +
                 " " + id +
+                ", \"" + name + "\"" +
                 ", \"" + taskDescription + "\"" +
-                ", executor: " + executor.getName() + " " + executor.getPatronymic() + " " + executor.getSurName()
+                ", executor: " + executor.getName() + " " + executor.getPatronymic() + " " + executor.getSurname()
                 + ", current status: " + taskStatus + ".";
     }
 }

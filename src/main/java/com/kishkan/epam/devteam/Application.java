@@ -1,6 +1,6 @@
 package com.kishkan.epam.devteam;
 
-import com.kishkan.epam.devteam.service.demo.DemoService;
+import com.kishkan.epam.devteam.service.demo.DemoAddEmployee;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -12,6 +12,6 @@ public class Application {
 	public static void main(String[] args) {
 		ApplicationContext context = SpringApplication.run(Application.class, args);
 
-		context.getBean(DemoService.class).makeTest();
+		//context.getBean(DemoAddEmployee.class).addEmployee();
 	}
 }
