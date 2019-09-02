@@ -5,6 +5,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
+import java.time.LocalDate;
+
 
 @SpringBootApplication
 public class Application {
@@ -16,6 +18,7 @@ public class Application {
 		//context.getBean(DemoGetEmployeeById.class).getEmployeeById(1003);
 		//context.getBean(DemoGetEmployeesByAppointment.class).getEmployeesByAppointment("designer");
 		//context.getBean(DemoGetAllEmployees.class).getAllEmployees();
-		context.getBean(DemoGetTasks.class).getTaskById(1);
+		//context.getBean(DemoGetTasks.class).getTaskById(1);
+		//context.getBean(DemoAddTask.class).addTask();
 	}
 }

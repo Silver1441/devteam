@@ -12,6 +12,11 @@ public class TaskRepositoryManagerImpl implements TaskRepositoryManager {
     private TaskRepository taskRepository;
 
     @Override
+    public void addTask (Task task){
+        taskRepository.addTask(task);
+    }
+
+    @Override
     public Task getTaskById(int id) {
         return taskRepository.getTaskById(id);
     }

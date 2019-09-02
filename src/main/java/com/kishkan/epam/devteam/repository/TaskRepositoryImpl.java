@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.time.LocalDate;
+
 @Repository
 public class TaskRepositoryImpl implements TaskRepository {
 
@@ -16,6 +18,14 @@ public class TaskRepositoryImpl implements TaskRepository {
     private TaskMapper taskMapper;
 
     private String sql;
+
+    @Override
+    public void addTask (Task task) {
+        sql = "INSERT INTO task (`name`, `description`, `executor`, `task_status`, `date_start`) " +
+                "VALUES (?, ?, ?, ?, ?)";
+        jdbcTemplate.update(sql, task.getName(), task.getTaskDescription(), task.getExecutor().getId(),
+                task.getTaskStatus(), task.getStartDate());
+    }
 
     @Override
     public Task getTaskById(int id) {
