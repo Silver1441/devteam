@@ -12,16 +12,6 @@ public class Task {
     private LocalDate startDate;
     private LocalDate endDate;
 
-    public Task(int id, String name, String taskDescription, Employee executor, String taskStatus,
-                LocalDate startDate) {
-        this.id = id;
-        this.name = name;
-        this.taskDescription = taskDescription;
-        this.executor = executor;
-        this.taskStatus = taskStatus;
-        this.startDate = startDate;
-    }
-
     public int getId() {
         return id;
     }
@@ -74,6 +64,6 @@ public class Task {
                 ", \"" + name + "\"" +
                 ", \"" + taskDescription + "\"" +
                 ", executor: " + executor.getName() + " " + executor.getPatronymic() + " " + executor.getSurname()
-                + ", current status: " + taskStatus + ".";
+                + ", current status: " + taskStatus + ", started: " + startDate + ", finished(?): " + endDate + ".";
     }
 }
