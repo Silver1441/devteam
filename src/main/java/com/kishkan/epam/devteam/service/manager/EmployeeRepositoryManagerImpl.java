@@ -27,4 +27,9 @@ public class EmployeeRepositoryManagerImpl implements EmployeeRepositoryManager 
     public List<Employee> getEmployeesByAppointment(String appointment){
         return employeeRepository.getEmployeesByAppointment(appointment);
     }
+
+    @Override
+    public List<Employee> getAllEmployees() {
+        return employeeRepository.getAllEmployees();
+    }
 }

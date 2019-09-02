@@ -1,38 +1,6 @@
-developer-list:
-  staffMembers:
-    - id: 101
-      name: Petr
-      patronymic: Nikolayevich
-      surName: Glinco
-      StaffCompetenceGrade: D2
-      StaffAppointment: DEVELOPER
-    - id: 102
-      name: Stas
-      patronymic: Grigorievich
-      surName: Kurban
-      StaffCompetenceGrade: D3
-      StaffAppointment: DEVELOPER
-    - id: 103
-      name: Igor
-      patronymic: Ivanovich
-      surName: Buiko
-      StaffCompetenceGrade: D3
-      StaffAppointment: DESIGNER
-    - id: 104
-      name: Roman
-      patronymic: Ignatievich
-      surName: Chistoserdov
-      StaffCompetenceGrade: D4
-      StaffAppointment: DEVELOPER
-    - id: 105
-      name: Ivan
-      patronymic: Vladimirovich
-      surName: Tronin
-      StaffCompetenceGrade: D3
-      StaffAppointment: DEVELOPER
-    - id: 106
-      name: Gulman
-      patronymic: Sergeevich
-      surName: Zolotov
-      StaffCompetenceGrade: D5
-      StaffAppointment: DELIVERY_MANAGER
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/devteam?serverTimezone=UTC
+    username: root
+    password: 4erdvq
+    driver-class-name: com.mysql.cj.jdbc.Driver

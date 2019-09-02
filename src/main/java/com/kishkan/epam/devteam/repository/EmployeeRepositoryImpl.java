@@ -1,7 +1,7 @@
 package com.kishkan.epam.devteam.repository;
 
 import com.kishkan.epam.devteam.dto.Employee;
-import com.kishkan.epam.devteam.service.rowmapper.EmployeeMapper;
+import com.kishkan.epam.devteam.mapper.EmployeeMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -38,6 +38,12 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
     public List<Employee> getEmployeesByAppointment(String appointment){
         sql = "SELECT * FROM employee WHERE appointment = ?";
         return jdbcTemplate.query(sql, employeeMapper, appointment);
+    }
+
+    @Override
+    public List<Employee> getAllEmployees() {
+        sql = "SELECT * FROM employee";
+        return jdbcTemplate.query(sql, employeeMapper);
     }
 
 }

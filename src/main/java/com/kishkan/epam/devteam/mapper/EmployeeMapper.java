@@ -1,4 +1,4 @@
-package com.kishkan.epam.devteam.service.rowmapper;
+package com.kishkan.epam.devteam.mapper;
 
 import com.kishkan.epam.devteam.dto.Employee;
 import org.springframework.jdbc.core.RowMapper;
