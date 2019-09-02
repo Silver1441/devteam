@@ -54,4 +54,15 @@ public class Project {
     public void setEndDate(LocalDate endDate) {
         this.endDate = endDate;
     }
+
+    //Temporal toString for DEMO
+    @Override
+    public String toString() {
+        return "Project number:" +
+                " " + id +
+                ", \"" + name + "\"" +
+                ", \"" + projectDescription + "\"" +
+                ", manager: " + manager.getName() + " " + manager.getPatronymic() + " " + manager.getSurname()
+                + ", current status: " + projectStatus + ", started: " + startDate + ", finished(?): " + endDate + ".";
+    }
 }

@@ -25,6 +25,9 @@ public class Application {
 		//context.getBean(DemoGetTasks.class).getTasksByEndDate(LocalDate.parse("2019-08-20"));
 		//context.getBean(DemoAddTask.class).addTask();
 		//context.getBean(DemoUpdateTaskStatus.class).updateStatus(3, "RETURNED");
-		context.getBean(DemoAddProject.class).addProject();
+		//context.getBean(DemoAddProject.class).addProject();
+		//context.getBean(DemoGetProjects.class).getProjectById(1);
+		//context.getBean(DemoGetProjects.class).getAllProjects();
+		//context.getBean(DemoGetProjects.class).getProjectsByEmployeeId(1002);
 	}
 }

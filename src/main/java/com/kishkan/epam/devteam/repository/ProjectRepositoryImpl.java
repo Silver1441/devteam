@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public class ProjectRepositoryImpl implements ProjectRepository {
 
@@ -23,5 +25,23 @@ public class ProjectRepositoryImpl implements ProjectRepository {
                 "VALUES (?, ?, ?, ?, ?)";
         jdbcTemplate.update(sql, project.getName(), project.getProjectDescription(), project.getManager().getId(),
                 project.getProjectStatus(), project.getStartDate());
+    }
+
+    @Override
+    public Project getProjectById(int id) {
+        sql = "SELECT * FROM project WHERE target_id = ?";
+        return jdbcTemplate.queryForObject(sql, new Object[]{id}, projectMapper);
+    }
+
+    @Override
+    public List<Project> getAllProjects() {
+        sql = "SELECT * FROM project";
+        return jdbcTemplate.query(sql, projectMapper);
+    }
+
+    @Override
+    public List<Project> getProjectsByEmployeeId(int id) {
+        sql = "SELECT * FROM project WHERE manager = ?";
+        return jdbcTemplate.query(sql, projectMapper, id);
     }
 }
