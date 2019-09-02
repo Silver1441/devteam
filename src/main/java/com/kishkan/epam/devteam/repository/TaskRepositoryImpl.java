@@ -51,4 +51,16 @@ public class TaskRepositoryImpl implements TaskRepository {
         sql = "SELECT * FROM task WHERE executor = ?";
         return jdbcTemplate.query(sql, taskMapper, id);
     }
+
+    @Override
+    public List<Task> getTasksByStartDate(LocalDate date) {
+        sql = "SELECT * FROM task WHERE date_start = ?";
+        return jdbcTemplate.query(sql, taskMapper, date.toString());
+    }
+
+    @Override
+    public List<Task> getTasksByEndDate(LocalDate date) {
+        sql = "SELECT * FROM task WHERE date_end = ?";
+        return jdbcTemplate.query(sql, taskMapper, date.toString());
+    }
 }

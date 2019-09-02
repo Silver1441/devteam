@@ -5,6 +5,7 @@ import com.kishkan.epam.devteam.repository.TaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -36,5 +37,15 @@ public class TaskRepositoryManagerImpl implements TaskRepositoryManager {
     @Override
     public List<Task> getTasksByEmployeeId(int id) {
         return taskRepository.getTasksByEmployeeId(id);
+    }
+
+    @Override
+    public List<Task> getTasksByStartDate(LocalDate date) {
+        return taskRepository.getTasksByStartDate(date);
+    }
+
+    @Override
+    public List<Task> getTasksByEndDate(LocalDate date) {
+        return taskRepository.getTasksByEndDate(date);
     }
 }

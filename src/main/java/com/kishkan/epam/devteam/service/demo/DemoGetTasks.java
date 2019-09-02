@@ -4,6 +4,8 @@ import com.kishkan.epam.devteam.service.manager.TaskRepositoryManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+
 @Service
 public class DemoGetTasks {
 
@@ -20,5 +22,13 @@ public class DemoGetTasks {
 
     public void getTasksByEmployeeId(int id) {
         System.out.println(taskRepositoryManager.getTasksByEmployeeId(id));
+    }
+
+    public void getTasksByStartDate(LocalDate date) {
+        System.out.println(taskRepositoryManager.getTasksByStartDate(date));
+    }
+
+    public void getTasksByEndDate(LocalDate date) {
+        System.out.println(taskRepositoryManager.getTasksByEndDate(date));
     }
 }
