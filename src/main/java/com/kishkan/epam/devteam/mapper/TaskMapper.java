@@ -25,7 +25,9 @@ public class TaskMapper implements RowMapper<Task> {
         task.setExecutor(employeeRepositoryManager.getEmployeeById(resultSet.getInt("executor")));
         task.setTaskStatus(resultSet.getString("task_status"));
         task.setStartDate(LocalDate.parse(resultSet.getString("date_start")));
-        task.setEndDate(LocalDate.parse(resultSet.getString("date_end")));
+        if(resultSet.getString("date_end") != null){
+            task.setEndDate(LocalDate.parse(resultSet.getString("date_end")));
+        }
 
         return task;
     }

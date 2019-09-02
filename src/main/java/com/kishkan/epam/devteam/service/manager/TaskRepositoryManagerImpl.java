@@ -17,6 +17,11 @@ public class TaskRepositoryManagerImpl implements TaskRepositoryManager {
     }
 
     @Override
+    public void updateStatus (int id, String status) {
+        taskRepository.updateStatus(id, status);
+    }
+
+    @Override
     public Task getTaskById(int id) {
         return taskRepository.getTaskById(id);
     }

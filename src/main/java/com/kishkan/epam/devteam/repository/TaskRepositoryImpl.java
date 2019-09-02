@@ -28,6 +28,12 @@ public class TaskRepositoryImpl implements TaskRepository {
     }
 
     @Override
+    public void updateStatus (int id, String status) {
+        sql = "UPDATE task SET task_status = ? WHERE task_id = ?";
+        jdbcTemplate.update(sql, status, id);
+    }
+
+    @Override
     public Task getTaskById(int id) {
         sql = "SELECT * FROM task WHERE task_id = ?";
         return jdbcTemplate.queryForObject(sql, new Object[]{id}, taskMapper);
