@@ -14,7 +14,7 @@ import java.time.LocalDate;
 public class TaskMapper implements RowMapper<Task> {
 
     @Autowired
-    EmployeeRepositoryManager employeeRepositoryManager;
+    private EmployeeRepositoryManager employeeRepositoryManager;
 
     @Override
     public Task mapRow(ResultSet resultSet, int rowNum) throws SQLException {
