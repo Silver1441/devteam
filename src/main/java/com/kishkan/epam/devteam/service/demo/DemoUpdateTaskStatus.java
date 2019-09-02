@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 public class DemoUpdateTaskStatus {
 
     @Autowired
-    TaskRepositoryManager taskRepositoryManager;
+    private TaskRepositoryManager taskRepositoryManager;
 
     public void updateStatus(int id, String status) {
         taskRepositoryManager.updateStatus(id, status);

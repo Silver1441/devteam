@@ -18,7 +18,9 @@ public class Application {
 		//context.getBean(DemoGetEmployeesByAppointment.class).getEmployeesByAppointment("designer");
 		//context.getBean(DemoGetAllEmployees.class).getAllEmployees();
 		//context.getBean(DemoGetTasks.class).getTaskById(3);
+		//context.getBean(DemoGetTasks.class).getAllTasks();
+		context.getBean(DemoGetTasks.class).getTasksByEmployeeId(1001);
 		//context.getBean(DemoAddTask.class).addTask();
-		context.getBean(DemoUpdateTaskStatus.class).updateStatus(3, "RETURNED");
+		//context.getBean(DemoUpdateTaskStatus.class).updateStatus(3, "RETURNED");
 	}
 }

@@ -8,9 +8,17 @@ import org.springframework.stereotype.Service;
 public class DemoGetTasks {
 
     @Autowired
-    TaskRepositoryManager taskRepositoryManager;
+    private TaskRepositoryManager taskRepositoryManager;
 
     public void getTaskById(int id) {
         System.out.println(taskRepositoryManager.getTaskById(id));
+    }
+
+    public void getAllTasks() {
+        System.out.println(taskRepositoryManager.getAllTasks());
+    }
+
+    public void getTasksByEmployeeId(int id) {
+        System.out.println(taskRepositoryManager.getTasksByEmployeeId(id));
     }
 }

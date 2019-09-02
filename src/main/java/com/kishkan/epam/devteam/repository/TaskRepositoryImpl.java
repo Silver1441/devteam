@@ -7,6 +7,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Repository
 public class TaskRepositoryImpl implements TaskRepository {
@@ -37,5 +38,17 @@ public class TaskRepositoryImpl implements TaskRepository {
     public Task getTaskById(int id) {
         sql = "SELECT * FROM task WHERE task_id = ?";
         return jdbcTemplate.queryForObject(sql, new Object[]{id}, taskMapper);
+    }
+
+    @Override
+    public List<Task> getAllTasks() {
+        sql = "SELECT * FROM task";
+        return jdbcTemplate.query(sql, taskMapper);
+    }
+
+    @Override
+    public List<Task> getTasksByEmployeeId(int id) {
+        sql = "SELECT * FROM task WHERE executor = ?";
+        return jdbcTemplate.query(sql, taskMapper, id);
     }
 }
